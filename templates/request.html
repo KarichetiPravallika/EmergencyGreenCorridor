@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Request</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <h2>🚑 Emergency Green Corridor</h2>
+
+        <div>
+
+            <a href="/">Home</a>
+
+            <a href="/about">About</a>
+
+            <a href="/request">Emergency Request</a>
+
+        </div>
+
+    </nav>
+
+    <!-- Form Section -->
+
+    <div class="hero">
+
+        <h1>Emergency Request Form</h1>
+
+        <p>
+            Fill in the ambulance details to request a Green Corridor.
+        </p>
+
+        <form action="/submit" method="POST">
+
+            <label>Ambulance Number</label><br>
+            <input type="text" name="ambulance" placeholder="Enter Ambulance Number">
+            <label>Driver Name</label><br>
+            <input type="text" name="driver" placeholder="Enter Driver Name">
+
+            <label>Driver Mobile Number</label><br>
+            <input type="tel" name="mobile" placeholder="Enter Mobile Number">
+            <label>Patient Name</label><br>
+            <input type="text" name="patient_name" placeholder="Enter Patient Name">
+            <label>Patient Age</label><br>
+            <input type="number" name="patient_age" placeholder="Enter Age">
+            <label>Emergency Type</label><br>
+
+            <select name="emergency">
+
+                <option value="">Select Emergency</option>
+
+                <option>Heart Attack</option>
+
+                <option>Accident</option>
+
+                <option>Stroke</option>
+
+                <option>Pregnancy</option>
+
+                <option>Fire Injury</option>
+
+                <option>Other</option>
+
+            </select>
+
+            <br><br>
+
+            <label>Current Location</label><br>
+            <input type="text" name="location" placeholder="Current Location">
+
+            <label>Destination Hospital</label><br>
+            <input type="text" name="hospital" placeholder="Hospital Name">
+
+            <label>Estimated Distance (KM)</label><br>
+            <input type="number" name="distance" placeholder="Distance">
+            <label>Additional Notes</label><br>
+
+            <textarea
+name="notes"
+rows="5"
+cols="50"
+placeholder="Enter additional emergency details..."></textarea>
+            <br><br>
+
+            <button type="submit">
+                🚑 Submit Request
+            </button>
+
+            <button type="reset">
+                Clear Form
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

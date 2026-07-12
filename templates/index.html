@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Emergency Green Corridor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>🚑 Emergency Green Corridor</h2>
+
+        <div>
+
+            <a href="/">Home</a>
+
+            <a href="/about">About</a>
+
+            <a href="/request">Emergency Request</a>
+
+        </div>
+
+    </nav>
+
+    <section class="hero">
+
+        <h1>Save Lives with Smart Traffic Management</h1>
+
+        <p>
+            Our system helps ambulances reach hospitals faster
+            by creating a Green Corridor.
+        </p>
+
+        <br>
+
+        <!-- Emergency Request Button -->
+
+        <a href="/request">
+
+            <button style="
+                padding:12px 25px;
+                background:green;
+                color:white;
+                border:none;
+                border-radius:5px;
+                cursor:pointer;
+                font-size:18px;">
+
+                🚑 Request Green Corridor
+
+            </button>
+
+        </a>
+
+        <br><br>
+
+        <!-- Next Button -->
+
+        <a href="/about">
+
+            <button style="
+                padding:12px 25px;
+                background:#008080;
+                color:white;
+                border:none;
+                border-radius:5px;
+                cursor:pointer;
+                font-size:18px;">
+
+                Next ➜ About
+
+            </button>
+
+        </a>
+
+    </section>
+
+</body>
+
+</html>

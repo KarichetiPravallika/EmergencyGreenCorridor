@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Traffic Control Dashboard</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f4f4;
+            margin:0;
+        }
+
+        h1{
+            background:#0d47a1;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin:0;
+        }
+
+        table{
+            width:95%;
+            margin:30px auto;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid #ccc;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#1565c0;
+            color:white;
+        }
+
+        .green{
+            color:green;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>🚦 Traffic Control Dashboard</h1>
+
+<table>
+
+<tr>
+
+<th>Ambulance</th>
+<th>Current Location</th>
+<th>Destination</th>
+<th>Signal Status</th>
+
+</tr>
+
+{% for row in data %}
+
+<tr>
+
+<td>{{ row[1] }}</td>
+<td>{{ row[7] }}</td>
+<td>{{ row[8] }}</td>
+<td class="green">🟢 GREEN</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+<br><br>
+
+<div style="text-align:center;">
+
+    <a href="/hospital">
+        <button style="
+        background:gray;
+        color:white;
+        padding:12px 25px;
+        border:none;
+        border-radius:5px;
+        font-size:16px;">
+            ⬅ Back to Hospital
+        </button>
+    </a>
+
+    &nbsp;&nbsp;
+
+    <a href="/notifications">
+        <button style="
+        background:#7b1fa2;
+        color:white;
+        padding:12px 25px;
+        border:none;
+        border-radius:5px;
+        font-size:16px;">
+            🔔 Next → Notifications
+        </button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

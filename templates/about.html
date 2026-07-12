@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>About</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>🚑 Emergency Green Corridor</h2>
+
+        <div>
+
+            <a href="/">Home</a>
+
+            <a href="/about">About</a>
+
+            <a href="/request">Emergency Request</a>
+
+        </div>
+
+    </nav>
+
+    <div class="hero">
+
+        <h1>About Emergency Green Corridor</h1>
+
+        <p>
+
+            The Emergency Green Corridor System is designed to help
+            ambulances reach hospitals faster during emergencies.
+
+            It connects the Ambulance, Admin, Police, Hospital,
+            and Traffic Department through one centralized system.
+
+            The Admin approves emergency requests, Police clear the
+            traffic, Hospitals prepare for the patient, and Traffic
+            signals are managed to create a Green Corridor.
+
+        </p>
+
+        <br>
+
+        <a href="/">
+
+            <button style="
+                padding:12px 25px;
+                background:gray;
+                color:white;
+                border:none;
+                border-radius:5px;
+                cursor:pointer;
+                font-size:18px;">
+
+                ⬅ Back to Home
+
+            </button>
+
+        </a>
+
+        &nbsp;&nbsp;
+
+        <a href="/request">
+
+            <button style="
+                padding:12px 25px;
+                background:green;
+                color:white;
+                border:none;
+                border-radius:5px;
+                cursor:pointer;
+                font-size:18px;">
+
+                Next ➜ Emergency Request
+
+            </button>
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>

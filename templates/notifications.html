@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Notifications</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f4f4;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#00695c;
+        }
+
+        .card{
+            width:80%;
+            margin:20px auto;
+            background:white;
+            padding:20px;
+            border-left:8px solid green;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+            border-radius:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>🔔 Emergency Notifications</h1>
+
+{% for row in data %}
+
+<div class="card">
+
+<h2>🚑 Ambulance {{ row[1] }}</h2>
+
+<p><b>Driver:</b> {{ row[2] }}</p>
+
+<p><b>Patient:</b> {{ row[4] }}</p>
+
+<p><b>Emergency:</b> {{ row[6] }}</p>
+
+<p><b>Destination:</b> {{ row[8] }}</p>
+
+<p style="color:green;"><b>Status:</b> {{ row[11] }}</p>
+
+</div>
+
+{% endfor %}
+<br><br>
+
+<div style="text-align:center;">
+
+    <a href="/traffic">
+        <button style="
+        background:gray;
+        color:white;
+        padding:12px 25px;
+        border:none;
+        border-radius:5px;
+        font-size:16px;
+        cursor:pointer;">
+            ⬅ Back to Traffic
+        </button>
+    </a>
+
+    &nbsp;&nbsp;
+
+    <a href="/map">
+        <button style="
+        background:#00897b;
+        color:white;
+        padding:12px 25px;
+        border:none;
+        border-radius:5px;
+        font-size:16px;
+        cursor:pointer;">
+            🗺️ Next → Live Map
+        </button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

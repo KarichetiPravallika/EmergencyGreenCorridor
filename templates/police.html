@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Police Dashboard</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f2f2f2;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:green;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid gray;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:green;
+            color:white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Police Dashboard</h1>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Ambulance</th>
+<th>Driver</th>
+<th>Mobile</th>
+<th>Emergency</th>
+<th>Location</th>
+<th>Hospital</th>
+<th>Status</th>
+
+</tr>
+
+{% for row in data %}
+
+<tr>
+
+<td>{{ row[0] }}</td>
+<td>{{ row[1] }}</td>
+<td>{{ row[2] }}</td>
+<td>{{ row[3] }}</td>
+<td>{{ row[6] }}</td>
+<td>{{ row[7] }}</td>
+<td>{{ row[8] }}</td>
+<td>{{ row[11] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+<br><br>
+
+<div style="text-align:center;">
+
+    <a href="/admin">
+        <button style="
+        background:gray;
+        color:white;
+        padding:12px 25px;
+        border:none;
+        border-radius:5px;
+        font-size:16px;">
+            ⬅ Back to Admin
+        </button>
+    </a>
+
+    &nbsp;&nbsp;
+
+    <a href="/hospital">
+        <button style="
+        background:#00897b;
+        color:white;
+        padding:12px 25px;
+        border:none;
+        border-radius:5px;
+        font-size:16px;">
+            🏥 Next → Hospital Dashboard
+        </button>
+    </a>
+
+</div>
+
+</body>
+
+</html>
